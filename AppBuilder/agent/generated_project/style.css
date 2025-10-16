@@ -1,0 +1,119 @@
+/* Root and body styling */
+html {
+    font-size: 16px; /* Base font size */
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f5f7fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+}
+
+/* Calculator container */
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Display area */
+#display {
+    background: #e9ecef;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.5rem;
+    text-align: right;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    min-height: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Keypad grid */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+/* Base button styling */
+.keypad button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background: #d4d4d2;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+.keypad button:focus {
+    outline: 2px solid #4d90fe;
+    outline-offset: 2px;
+}
+.keypad button:active {
+    transform: scale(0.96);
+}
+
+/* Operator buttons */
+button[data-key="+"],
+button[data-key="-"],
+button[data-key="*"],
+button[data-key="/"] {
+    background: #ff9500;
+    color: #fff;
+}
+
+/* Equals button */
+button[data-key="="] {
+    background: #34c759;
+    color: #fff;
+}
+
+/* Clear button */
+button[data-key="C"] {
+    background: #ff3b30;
+    color: #fff;
+}
+
+/* Backspace button */
+button[data-key="←"] {
+    background: #c7c7c7;
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .calculator {
+        padding: 0.75rem;
+    }
+    #display {
+        font-size: 1.25rem;
+        padding: 0.5rem 0.75rem;
+    }
+    .keypad button {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    .keypad {
+        gap: 0.4rem;
+    }
+}

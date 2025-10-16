@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleCalculator</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Calculator container -->
+    <div class="calculator">
+        <!-- Display area for expression and result -->
+        <div id="display" class="display"></div>
+        <!-- Keypad containing all calculator buttons -->
+        <div class="keypad">
+            <!-- Row 1: Clear, Backspace, Divide -->
+            <button data-key="C">C</button>
+            <button data-key="←">←</button>
+            <button data-key="/">/</button>
+            <!-- Row 2: 7, 8, 9, Multiply -->
+            <button data-key="7">7</button>
+            <button data-key="8">8</button>
+            <button data-key="9">9</button>
+            <button data-key="*">*</button>
+            <!-- Row 3: 4, 5, 6, Subtract -->
+            <button data-key="4">4</button>
+            <button data-key="5">5</button>
+            <button data-key="6">6</button>
+            <button data-key="-">-</button>
+            <!-- Row 4: 1, 2, 3, Add -->
+            <button data-key="1">1</button>
+            <button data-key="2">2</button>
+            <button data-key="3">3</button>
+            <button data-key="+">+</button>
+            <!-- Row 5: 0, Decimal, Equals -->
+            <button data-key="0">0</button>
+            <button data-key=".">.</button>
+            <button data-key="=">=</button>
+        </div>
+    </div>
+    <!-- Load JavaScript functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
